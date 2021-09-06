@@ -27,10 +27,10 @@ public class Utils {
         TextView text = (TextView) layout.findViewById(com.google.android.material.R.id.snackbar_text);
         //setting font color
         text.setTextColor(context.getResources().getColor(R.color.white));
-        Typeface font = null;
-        //Setting font
-        font =  ResourcesCompat.getFont(context, R.font.pacifico);
-        text.setTypeface(font);
+//        Typeface font = null;
+//        //Setting font
+//        font =  ResourcesCompat.getFont(context, R.font.gabriela);
+//        text.setTypeface(font);
         return snackbar;
 
     }

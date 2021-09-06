@@ -1,18 +1,19 @@
-package app.prac.monthlykhata;
+package app.prac.monthlykhata.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import app.prac.monthlykhata.Extra.Utils;
+import app.prac.monthlykhata.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class PhoneAuth extends AppCompatActivity implements View.OnClickListener {
+public class PhoneAuth extends AppCompatActivity{
 
     @BindView(R.id.edtPhone)
     TextView edtPhone;
@@ -25,7 +26,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
         ButterKnife.bind(this);
-        btnProceed.setOnClickListener(this);
+//        btnProceed.setOnClickListener(this);
     }
 
 
@@ -41,8 +42,9 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
     }
 
 
-    @Override
-    public void onClick(View v) {
+    @OnClick(R.id.btnProceed) void btnProceed() {
+        // TODO call server...
         phoneAuthMethod();
     }
+
 }

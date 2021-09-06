@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/blue_half_circle" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -32,20 +23,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pink_half_circle" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/purple_half_circle" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/app_name"
+        android:text="Add Transaction"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="32sp"
         app:fontFamily="@font/gabriela"
@@ -64,13 +47,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/r_lyt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_40"
         android:background="@drawable/l_purple_box"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_name">
@@ -82,38 +66,111 @@
             android:layout_marginStart="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_10"
-            android:text="Contact Number"
+            android:text="@string/amount_inr"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/sp_18"
+            app:fontFamily="@font/gabriela" />
+
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_toRightOf="@id/txt_2"
+            android:digits="0123456789"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
             app:fontFamily="@font/gabriela" />
 
         <TextView
             android:id="@+id/txt_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_1"
-            android:layout_alignBottom="@id/edtPhone"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="bottom"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="+91"
-            android:textColor="@color/grey"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/Tag"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/sp_18"
             app:fontFamily="@font/gabriela" />
 
+
         <EditText
-            android:id="@+id/edtPhone"
+            android:id="@+id/edt_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_1"
+            android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_40"
             android:layout_toRightOf="@id/txt_2"
-            android:digits="0123456789"
-            android:inputType="phone"
-            android:maxLength="10"
+            android:hint="Tag"
+            android:inputType="text"
             app:fontFamily="@font/gabriela" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/date"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_18"
+            app:fontFamily="@font/gabriela" />
+
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="80dp"
+            android:layout_toRightOf="@id/txt_2"
+            android:clickable="true"
+            android:drawableRight="@drawable/cal"
+            android:editable="false"
+            app:fontFamily="@font/gabriela" />
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="Transaction Type"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_18"
+            app:fontFamily="@font/gabriela" />
+
+        <RadioGroup
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20">
+
+            <RadioButton
+                android:id="@+id/rd_received"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Received"
+                app:fontFamily="@font/gabriela" />
+
+            <RadioButton
+                android:id="@+id/rd_paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paid"
+                app:fontFamily="@font/gabriela" />
+
+        </RadioGroup>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnProceed"
@@ -122,9 +179,9 @@
         android:layout_marginTop="@dimen/dp_60"
         android:background="@drawable/l_purple_box"
         android:clickable="true"
-        android:text="Proceed"
+        android:text="@string/add"
         android:textAllCaps="false"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
         android:textStyle="bold"
         app:fontFamily="@font/gabriela"

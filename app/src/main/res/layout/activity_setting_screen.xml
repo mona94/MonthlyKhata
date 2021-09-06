@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-
+    tools:context=".Activity.SettingScreen">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -64,6 +63,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
+
     <RelativeLayout
         android:id="@+id/r_lyt"
         android:layout_width="match_parent"
@@ -76,53 +76,39 @@
         app:layout_constraintTop_toBottomOf="@id/app_name">
 
         <TextView
-            android:id="@+id/txt_1"
+            android:id="@+id/txtBName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginEnd="@dimen/dp_10"
-            android:text="Contact Number"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/sp_18"
-            app:fontFamily="@font/gabriela" />
+            android:fontFamily="@font/gabriela"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/txt_2"
+            android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_1"
-            android:layout_alignBottom="@id/edtPhone"
+            android:layout_below="@id/txtBName"
             android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="bottom"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="+91"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:fontFamily="@font/gabriela"
+            android:text="@string/app_name"
             android:textColor="@color/grey"
-            android:textSize="@dimen/sp_18"
-            app:fontFamily="@font/gabriela" />
-
-        <EditText
-            android:id="@+id/edtPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_1"
-            android:layout_marginRight="@dimen/dp_40"
-            android:layout_toRightOf="@id/txt_2"
-            android:digits="0123456789"
-            android:inputType="phone"
-            android:maxLength="10"
-            app:fontFamily="@font/gabriela" />
+            android:textSize="30sp" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnProceed"
-        android:layout_width="150dp"
+        android:id="@+id/btnLogout"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_60"
         android:background="@drawable/l_purple_box"
         android:clickable="true"
-        android:text="Proceed"
+        android:text="Logout"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/sp_20"

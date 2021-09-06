@@ -1,10 +1,13 @@
-package app.prac.monthlykhata;
+package app.prac.monthlykhata.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import app.prac.monthlykhata.MonthlyKhataApp;
+import app.prac.monthlykhata.R;
 
 
 public class SplashScreen extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package app.prac.monthlykhata;
+package app.prac.monthlykhata.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import app.prac.monthlykhata.Extra.Utils;
+import app.prac.monthlykhata.MonthlyKhataApp;
+import app.prac.monthlykhata.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_3"
+    android:background="@color/l_grey"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_2">
+
+    <RelativeLayout
+        android:id="@+id/lytContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:src="@drawable/delete" />
+
+        <TextView
+            android:id="@+id/txtGnote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_5"
+            android:text="@string/note"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_18"
+            app:fontFamily="@font/gabriela" />
+
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGnote"
+            android:paddingLeft="@dimen/dp_5"
+            android:text="@string/amount"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_16"
+            app:fontFamily="@font/gabriela" />
+
+        <TextView
+            android:id="@+id/txtGdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAmount"
+            android:paddingLeft="@dimen/dp_5"
+            android:text="@string/date"
+            android:textSize="@dimen/sp_14"
+            app:fontFamily="@font/gabriela" />
+
+
+        <RelativeLayout
+            android:id="@+id/lytDebit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGdate"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="#FBE7E7"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="Paid"
+                android:textColor="@color/red_paid"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/gabriela" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lytDebit"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="#E0FBC1"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="Received"
+                android:textColor="@color/green_rec"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/gabriela" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
